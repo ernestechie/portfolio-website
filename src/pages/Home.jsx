@@ -139,6 +139,15 @@ const Home = () => {
           ))}
         </section>
       </section>
+
+      {/* CONTACT ME */}
+      <section className='section contact'>
+        <p className='heading'>Contact me</p>
+        <p className='subheading'>
+          Startup projects? Gigs? Collaborations? Contact me via email below, or
+          any of these social platforms.
+        </p>
+      </section>
     </main>
   );
 };
