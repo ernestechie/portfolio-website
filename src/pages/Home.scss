@@ -242,6 +242,29 @@
     text-align: center;
     font-size: 1rem;
   }
+
+  &-form-div {
+    background: $dark-blue;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+
+    .contact-form {
+      .input-group {
+        label,
+        input {
+          display: block;
+        }
+
+        label {
+          color: $light-color;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $md) {

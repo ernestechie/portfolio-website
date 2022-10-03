@@ -147,6 +147,23 @@ const Home = () => {
           Startup projects? Gigs? Collaborations? Contact me via email below, or
           any of these social platforms.
         </p>
+
+        <div className='contact-form-div'>
+          <form className='contact-form'>
+            <div className='input-group'>
+              <label htmlFor='name'>Your name</label>
+              <input type='text' id='name' />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='email'>Your Email</label>
+              <input type='email' id='email' />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='message'>Message</label>
+              <input type='message' id='message' />
+            </div>
+          </form>
+        </div>
       </section>
     </main>
   );
