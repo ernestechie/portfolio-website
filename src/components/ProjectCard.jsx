@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
             target='_blank'
             rel='noreferrer'
           >
-            Live Site <MdLaunch />
+            Site <MdLaunch />
           </a>
           <a
             href={project.github_link}
@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
             target='_blank'
             rel='noreferrer'
           >
-            Github Repo <BsGithub />
+            Github <BsGithub />
           </a>
         </div>
       </div>

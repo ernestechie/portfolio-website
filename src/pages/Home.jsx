@@ -6,7 +6,7 @@ import { TbBrandNextjs } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import myImage1 from '../assets/jpgs/me-1.png';
 import myImage2 from '../assets/jpgs/me-2.png';
-import { SocialLinks, ProjectCard } from '../components';
+import { ProjectCard, SocialLinks } from '../components';
 import { PROJECTS } from '../data/data';
 import './Home.scss';
 

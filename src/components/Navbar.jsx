@@ -7,17 +7,11 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const location = useLocation().pathname;
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   const [showNav, setShowNav] = useState(false);
   const toggleNav = () => setShowNav((prev) => !prev);
 
-  window.addEventListener('scroll', () => {
-    setScrollPosition(() => window.scrollY);
-  });
-
   return (
-    <nav className={`navbar ${scrollPosition > 50 && 'nav-color'}`}>
+    <nav className='navbar'>
       <h1>
         <Link to='/' className='navbar-logo'>
           ernestechie

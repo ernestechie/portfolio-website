@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .social-links .span {
@@ -46,7 +48,16 @@
   top: 9rem;
 }
 
+// @media screen and (min-width: $md) {
+
+// }
+
 @media screen and (min-width: $lg) {
+  .social-links {
+    opacity: 1;
+    pointer-events: all;
+  }
+
   .social-links .span:nth-child(2) {
     top: 4rem;
   }
