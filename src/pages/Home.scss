@@ -107,14 +107,15 @@
 
   .dev-tools {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     align-items: center;
 
     .badge {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
+      gap: 1rem;
       font-weight: 600;
       font-size: 1.1rem;
       padding: 1rem;
@@ -238,7 +239,7 @@
     padding: 3rem 2rem;
 
     .dev-tools {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -285,7 +286,7 @@
     padding: 3rem 5rem;
 
     .dev-tools {
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 
@@ -328,10 +329,6 @@
 
     .tools {
       padding: 3rem 8rem;
-
-      .dev-tools {
-        grid-template-columns: repeat(8, 1fr);
-      }
     }
   }
 
