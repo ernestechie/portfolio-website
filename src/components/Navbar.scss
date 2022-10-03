@@ -174,7 +174,7 @@
       }
     }
 
-    .burger-menu {
+    .nav-buttons {
       display: none;
     }
 
@@ -203,10 +203,7 @@
     }
 
     .nav-buttons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
+      display: none;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsStack } from 'react-icons/bs';
 import { MdLaunch } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
@@ -16,6 +16,9 @@ const ProjectCard = ({ project }) => {
       <div className='content'>
         <p className='project-name'>{project.name}</p>
         <p className='project-description'>{project.description}</p>
+        <p className='project-tech-stack'>
+          <BsStack /> {project.tech_stack}
+        </p>
         <div className='links'>
           <a
             href={project.live_site}
@@ -31,7 +34,7 @@ const ProjectCard = ({ project }) => {
             target='_blank'
             rel='noreferrer'
           >
-            Github <BsGithub />
+            Repo <BsGithub />
           </a>
         </div>
       </div>

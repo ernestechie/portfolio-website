@@ -85,8 +85,7 @@ const Navbar = () => {
       <div className={showNav && 'nav-overlay'}></div>
 
       <div className='nav-buttons'>
-        {/* <button className='btn theme-toggle-btn'>*</button> */}
-        <button className='btn nav-contact-btn'>Contact me</button>
+        {/* <button className='btn nav-contact-btn'>Contact me</button> */}
         <HiMenuAlt3 className='burger-menu' onClick={toggleNav} />
       </div>
     </nav>

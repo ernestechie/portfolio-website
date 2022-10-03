@@ -33,6 +33,16 @@
   line-height: 1.5;
 }
 
+.project-card .content .project-tech-stack {
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: $dark-accent-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
 .project-card .content .links {
   display: flex;
   align-items: center;

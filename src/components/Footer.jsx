@@ -1,31 +1,26 @@
-import { useState } from 'react';
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
-import './SocialLinks.scss';
+import './Footer.scss';
 
-const SocialLinks = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  window.addEventListener('scroll', () => {
-    setScrollPosition(() => window.scrollY);
-  });
-
+const Footer = () => {
   return (
-    <>
-      {scrollPosition < 50 && (
-        <div className='social-links'>
+    <footer className='footer'>
+      <div className='head'>
+        <p className='h1'>Isaiah Ernest Ovie</p>
+        <p className='h2'>Frontend Developer</p>
+      </div>
+      <div className='links'>
+        <div className='nav-link-social-links'>
           <a
-            href='https://www.github.com/ernestechie'
+            href='https://github.com/ernestechie'
             target='_blank'
             rel='noreferrer'
-            className='span'
           >
             <BsGithub />
           </a>
           <a
-            href='https://www.twitter.com/ernestechie'
+            href='https://twitter.com/ernestechie'
             target='_blank'
             rel='noreferrer'
-            className='span'
           >
             <BsTwitter />
           </a>
@@ -33,22 +28,21 @@ const SocialLinks = () => {
             href='https://www.linkedin.com/in/ernestechie/'
             target='_blank'
             rel='noreferrer'
-            className='span'
           >
             <BsLinkedin />
           </a>
           <a
-            href='https://www.instagram.com/ernestechie'
+            href='https://instagram.com/ernestechie'
             target='_blank'
             rel='noreferrer'
-            className='span'
           >
             <BsInstagram />
           </a>
         </div>
-      )}
-    </>
+      </div>
+      <div className='copyright'>&copy; ernestechie</div>
+    </footer>
   );
 };
 
-export default SocialLinks;
+export default Footer;
