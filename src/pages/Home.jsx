@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { AiFillApi } from 'react-icons/ai';
 import { BsChevronRight, BsTwitter } from 'react-icons/bs';
 import { FaBootstrap, FaGitAlt, FaReact } from 'react-icons/fa';
@@ -13,6 +14,31 @@ import { PROJECTS } from '../data/data';
 import './Home.scss';
 
 const Home = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const { name, email, message } = formData;
+
+  const formValid =
+    name.trim().length > 0 &&
+    email.trim().length > 0 &&
+    message.trim().length > 0;
+
+  const formInputHandler = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    formValid ? console.log('Sending...') : console.log('Please fill the form');
+  };
+
   return (
     <>
       <main className='home page'>
@@ -182,20 +208,46 @@ const Home = () => {
             <form className='contact-form'>
               <div className='input-group'>
                 <label htmlFor='name'>Your name</label>
-                <input type='text' id='name' />
+                <input
+                  type='text'
+                  id='name'
+                  onChange={formInputHandler}
+                  value={name}
+                />
               </div>
               <div className='input-group'>
                 <label htmlFor='email'>Your Email</label>
-                <input type='email' id='email' />
+                <input
+                  type='email'
+                  id='email'
+                  onChange={formInputHandler}
+                  value={email}
+                />
               </div>
               <div className='input-group'>
                 <label htmlFor='message'>Message</label>
-                <textarea name='message' id='message'></textarea>
+                <textarea
+                  name='message'
+                  id='message'
+                  onChange={formInputHandler}
+                  value={message}
+                ></textarea>
               </div>
-
-              <a href='_' type='submit' className='button btn'>
-                Send message
-              </a>
+              <button
+                className={`button ${!formValid && 'disabled'}`}
+                disabled={!formValid}
+                onClick={formSubmitHandler}
+              >
+                <a
+                  href={`mailto:officialisaiahovie@gmail.com?Subject=${`${name} via Portfolio Website. Email 👉🏽 ${email}`}&body=${message}`}
+                  type='submit'
+                  disabled
+                >
+                  {formValid
+                    ? 'Send message'
+                    : 'Fill form before you can submit'}
+                </a>
+              </button>
             </form>
           </div>
         </section>
