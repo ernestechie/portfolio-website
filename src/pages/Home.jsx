@@ -34,11 +34,6 @@ const Home = () => {
     }));
   };
 
-  const formSubmitHandler = (e) => {
-    e.preventDefault();
-    formValid ? console.log('Sending...') : console.log('Please fill the form');
-  };
-
   return (
     <>
       <main className='home page'>
@@ -236,7 +231,6 @@ const Home = () => {
               <button
                 className={`button ${!formValid && 'disabled'}`}
                 disabled={!formValid}
-                onClick={formSubmitHandler}
               >
                 <a
                   href={`mailto:officialisaiahovie@gmail.com?Subject=${`${name} via Portfolio Website. Email 👉🏽 ${email}`}&body=${message}`}
