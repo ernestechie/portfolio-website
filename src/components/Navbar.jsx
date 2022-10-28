@@ -2,49 +2,35 @@ import { useState } from 'react';
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
-import { Link, useLocation } from 'react-router-dom';
 import './Navbar.scss';
 
 const Navbar = () => {
-  const location = useLocation().pathname;
   const [showNav, setShowNav] = useState(false);
   const toggleNav = () => setShowNav((prev) => !prev);
 
   return (
     <nav className='navbar'>
       <h1>
-        <Link to='/' className='navbar-logo'>
+        <a href='#' className='navbar-logo'>
           ernestechie
-        </Link>
+        </a>
       </h1>
       <ul className={`navbar-main-nav ${showNav ? 'show-nav' : 'hide-nav'}`}>
         <IoClose className='close-nav-button' onClick={toggleNav} />
         <li>
-          <Link
-            to='/'
-            className={location === '/' && 'active'}
-            onClick={toggleNav}
-          >
+          <a href='#' onClick={toggleNav}>
             Home
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to='/about'
-            className={location === '/about' && 'active'}
-            onClick={toggleNav}
-          >
+          <a href='#about' onClick={toggleNav}>
             About
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to='/projects'
-            className={location === '/projects' && 'active'}
-            onClick={toggleNav}
-          >
+          <a href='#projects' onClick={toggleNav}>
             Projects
-          </Link>
+          </a>
         </li>
 
         <div className='nav-link-social-links'>

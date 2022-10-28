@@ -1,18 +1,16 @@
 import { BsGithub, BsStack } from 'react-icons/bs';
 import { MdLaunch } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
 
 const ProjectCard = ({ project }) => {
   return (
     <div className='project-card'>
-      <Link
-        to={`projects/${project.id}`}
+      <div
         className='project-image'
         style={{
           background: `url(${project.image_url}) no-repeat center center/cover`,
         }}
-      ></Link>
+      ></div>
       <div className='content'>
         <p className='project-name'>{project.name}</p>
         <p className='project-description'>{project.description}</p>

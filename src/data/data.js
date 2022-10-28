@@ -3,7 +3,7 @@ import anonymailThumbnail from '../assets/jpgs/anonymail-project-thumbnail.png';
 
 const PROJECTS = [
   {
-    id: uuidv4(),
+    id: 'anonymail',
     image_url: anonymailThumbnail,
     name: 'AnonyMail',
     description:

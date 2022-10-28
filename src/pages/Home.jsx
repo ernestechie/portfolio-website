@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { AiFillApi } from 'react-icons/ai';
-import { BsChevronRight, BsTwitter } from 'react-icons/bs';
+import { BsTwitter } from 'react-icons/bs';
 import { FaBootstrap, FaGitAlt, FaReact } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { RiWhatsappFill } from 'react-icons/ri';
 import { SiFirebase, SiSass, SiTailwindcss } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
-import { Link } from 'react-router-dom';
 import myImage1 from '../assets/jpgs/me-1.png';
 import myImage2 from '../assets/jpgs/me-2.png';
 import { Footer, ProjectCard, SocialLinks } from '../components';
@@ -104,7 +103,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className='section about'>
+        <section id='about' className='section about'>
           <p className='heading'>About me</p>
           <p className='subheading'>Who I am. What I do.</p>
 
@@ -132,15 +131,11 @@ const Home = () => {
                 I'm a team player and a fast learner, that means I can easily
                 adapt in a competitive environment and work in a team.
               </p>
-
-              <Link to='/about'>
-                More about me <BsChevronRight />
-              </Link>
             </div>
           </div>
         </section>
 
-        <section className='section projects'>
+        <section id='projects' className='section projects'>
           <p className='heading'>Projects</p>
           <p className='subheading'>
             Here are some of my projects. Visit my
@@ -235,7 +230,9 @@ const Home = () => {
                 <a
                   href={`mailto:officialisaiahovie@gmail.com?Subject=${`${name} via Portfolio Website. Email 👉🏽 ${email}`}&body=${message}`}
                   type='submit'
-                  disabled
+                  style={{
+                    pointerEvents: `${formValid ? 'all' : 'none'}`,
+                  }}
                 >
                   {formValid
                     ? 'Send message'
