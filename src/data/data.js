@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import anonymailThumbnail from '../assets/jpgs/anonymail-project-thumbnail.png';
 
 const PROJECTS = [
@@ -14,4 +13,4 @@ const PROJECTS = [
   },
 ];
 
-export { PROJECTS };
+export default PROJECTS;

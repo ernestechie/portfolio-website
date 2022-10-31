@@ -7,17 +7,17 @@
   flex-direction: column;
   gap: 0.5rem;
   overflow: hidden;
-  height: 400px;
+  height: 480px;
 }
 
 .project-card .content {
-  padding: 1.5rem;
+  padding: 1rem 2rem;
   color: $white;
 }
 
 .project-card .content .project-name {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: $white;
 }
 
@@ -28,7 +28,7 @@
 
 .project-card .content .project-description {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 1rem 0;
   line-height: 1.5;
 }
@@ -46,7 +46,9 @@
 .project-card .content .links {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 .project-card .content .links a {
@@ -54,10 +56,10 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
   font-size: 1.2rem;
   border-radius: 1rem;
   font-weight: 600;
+  padding-right: 2rem;
 }
 
 .project-card .content .links a.live-site {
