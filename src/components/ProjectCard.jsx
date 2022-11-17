@@ -24,16 +24,18 @@ const ProjectCard = ({ project }) => {
             target='_blank'
             rel='noreferrer'
           >
-            Site <MdLaunch />
+            Website <MdLaunch />
           </a>
-          <a
-            href={project.github_link}
-            className='github-link'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Repo <BsGithub />
-          </a>
+          {project.public && (
+            <a
+              href={project.github_link}
+              className='github-link'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Github <BsGithub />
+            </a>
+          )}
         </div>
       </div>
     </div>
