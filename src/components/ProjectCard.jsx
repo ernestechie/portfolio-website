@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
             target='_blank'
             rel='noreferrer'
           >
-            Website <MdLaunch />
+            Site <MdLaunch />
           </a>
           {project.public && (
             <a
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
               target='_blank'
               rel='noreferrer'
             >
-              Github <BsGithub />
+              Repo <BsGithub />
             </a>
           )}
         </div>
